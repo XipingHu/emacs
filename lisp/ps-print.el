@@ -6490,7 +6490,7 @@ If FACE is not a valid face name, use default face."
 	  (setq filename (expand-file-name filename))
 	  (let ((coding-system-for-write 'raw-text-unix))
 	    (write-region (point-min) (point-max) filename))
-	  (and ps-razzle-dazzle (message "Wrote %s" filename)))
+	  (and ps-razzle-dazzle (message "Wrote from ps-print %s" filename)))
       ;; Else, spool to the printer
       (with-current-buffer ps-spool-buffer
 	(let* ((coding-system-for-write 'raw-text-unix)

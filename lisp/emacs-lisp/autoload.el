@@ -901,7 +901,7 @@ FILE's modification time."
     (rename-file tempfile buffer-file-name t))
   (set-buffer-modified-p nil)
   (set-visited-file-modtime)
-  (or noninteractive (message "Wrote %s" buffer-file-name)))
+  (or noninteractive (message "Wrote from emacs-lisp/autoload %s" buffer-file-name)))
 
 (defun autoload-save-buffers ()
   (while autoload-modified-buffers

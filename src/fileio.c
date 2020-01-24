@@ -5346,12 +5346,20 @@ write_region (Lisp_Object start, Lisp_Object end, Lisp_Object filename,
       return Qnil;
     }
 
+  /* if (!auto_saving && !noninteractive) */
+  /*   message_with_string ((NUMBERP (append) */
+  /* 			  ? "Updated %s" */
+  /* 			  : ! NILP (append) */
+  /* 			  ? "Added to %s" */
+  /* 			  : "Wrote from fileio.c %s"), */
+  /* 			 visit_file, 1); */
+
   if (!auto_saving && !noninteractive)
     message_with_string ((NUMBERP (append)
 			  ? "Updated %s"
 			  : ! NILP (append)
 			  ? "Added to %s"
-			  : "Wrote %s"),
+			  : ""),
 			 visit_file, 1);
 
   return Qnil;

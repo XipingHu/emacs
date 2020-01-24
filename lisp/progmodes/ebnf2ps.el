@@ -5319,7 +5319,7 @@ killed after process termination."
       (setq filename (expand-file-name filename))
       (let ((coding-system-for-write 'raw-text-unix))
 	(write-region (point-min) (point-max) filename))
-      (message "Wrote %s" filename))))
+      (message "Wrote from ebnf2ps %s" filename))))
 
 
 (defun ebnf-insert-ebnf-prologue ()
